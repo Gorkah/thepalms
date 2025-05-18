@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos Innovadores - thePalms.tech</title>
+  <meta name="description" content="Explora nuestras herramientas innovadoras: Notelite para gestión de notas, QuickFind para búsquedas con IA, y ThePalms Crypto para trading de criptomonedas.">
+  <meta name="keywords" content="notelite, quickfind, thepalms crypto, herramientas tecnológicas, gestión de notas, búsqueda inteligente, trading criptomonedas">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  
+  <!-- Tailwind CSS desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+  <!-- Header Component -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <a href="/index.html" class="flex items-center">
+          <img src="/images/logo.png" alt="thePalms.tech Logo" class="h-10">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Inicio</a>
+          <a href="/pages/videos/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Videos</a>
+          <a href="/pages/rankings/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Rankings</a>
+          <a href="/pages/proyectos/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Proyectos</a>
+          <a href="/pages/quienes-somos.html" class="nav-link hover:text-blue-600 transition-colors duration-300">¿Quiénes Somos?</a>
+          <a href="/pages/blog/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Blog</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <nav class="flex flex-col space-y-4">
+          <a href="/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Inicio</a>
+          <a href="/pages/videos/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Videos</a>
+          <a href="/pages/rankings/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Rankings</a>
+          <a href="/pages/proyectos/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Proyectos</a>
+          <a href="/pages/quienes-somos.html" class="nav-link hover:text-blue-600 transition-colors duration-300">¿Quiénes Somos?</a>
+          <a href="/pages/blog/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Contenido principal -->
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">Nuestros Proyectos</h1>
+          <p class="text-lg mb-8">Herramientas innovadoras desarrolladas por thePalms.tech para mejorar tu experiencia digital</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <!-- Notelite -->
+        <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+          <div class="md:flex">
+            <div class="md:w-1/2 relative">
+              <img src="https://images.pexels.com/photos/1226398/pexels-photo-1226398.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Notelite" class="w-full h-full object-cover">
+              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/70 to-transparent md:hidden"></div>
+              <div class="absolute top-4 left-4 bg-white text-blue-600 rounded-full px-3 py-1 font-bold text-sm shadow-md md:hidden">
+                Notelite
+              </div>
+            </div>
+            <div class="md:w-1/2 p-8 md:p-12">
+              <div class="uppercase tracking-wide text-sm text-blue-600 font-semibold hidden md:block">Proyecto destacado</div>
+              <h2 class="text-3xl font-bold mt-2 mb-4 hidden md:block">Notelite</h2>
+              <div class="flex items-center mb-6 space-x-2">
+                <span class="px-2 py-1 bg-green-100 text-green-800 rounded-md text-xs font-medium">Versión 2.5</span>
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-medium">Disponible</span>
+              </div>
+              
+              <p class="text-gray-700 mb-6">
+                <strong>Notelite</strong> es un gestor de notas y recordatorios inteligente que utiliza IA para organizar y priorizar tu información. Ideal para profesionales, estudiantes y cualquier persona que necesite mantener sus ideas organizadas.
+              </p>
+              
+              <div class="mb-8">
+                <h3 class="text-lg font-semibold mb-3">Características principales:</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Organización automática con etiquetas inteligentes</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Recordatorios contextuales basados en ubicación y hora</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Sincronización entre todos tus dispositivos</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Reconocimiento de voz para notas rápidas</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="flex flex-wrap gap-4">
+                <a href="/pages/proyectos/notelite.html" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition duration-300 flex items-center">
+                  <i class="fas fa-info-circle mr-2"></i> Más información
+                </a>
+                <a href="#" class="px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow hover:bg-gray-300 transition duration-300 flex items-center">
+                  <i class="fas fa-download mr-2"></i> Descargar
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- QuickFind -->
+        <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden mb-16">
+          <div class="md:flex flex-row-reverse">
+            <div class="md:w-1/2 relative">
+              <img src="https://images.pexels.com/photos/905163/pexels-photo-905163.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="QuickFind" class="w-full h-full object-cover">
+              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-l from-indigo-600/70 to-transparent md:hidden"></div>
+              <div class="absolute top-4 right-4 bg-white text-indigo-600 rounded-full px-3 py-1 font-bold text-sm shadow-md md:hidden">
+                QuickFind
+              </div>
+            </div>
+            <div class="md:w-1/2 p-8 md:p-12">
+              <div class="uppercase tracking-wide text-sm text-indigo-600 font-semibold hidden md:block">Proyecto destacado</div>
+              <h2 class="text-3xl font-bold mt-2 mb-4 hidden md:block">QuickFind</h2>
+              <div class="flex items-center mb-6 space-x-2">
+                <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-md text-xs font-medium">Versión 3.1</span>
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-medium">Disponible</span>
+              </div>
+              
+              <p class="text-gray-700 mb-6">
+                <strong>QuickFind</strong> es un buscador potenciado con IA que ofrece recomendaciones personalizadas y opciones de cashback. Aprende de tus búsquedas para mostrarte resultados cada vez más relevantes y te ayuda a ahorrar en tus compras online.
+              </p>
+              
+              <div class="mb-8">
+                <h3 class="text-lg font-semibold mb-3">Características principales:</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Resultados personalizados según tus intereses</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Comparador de precios integrado</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Cashback en miles de tiendas online</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Historial de búsquedas y preferencias en la nube</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="flex flex-wrap gap-4">
+                <a href="/pages/proyectos/quickfind.html" class="px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow hover:bg-indigo-700 transition duration-300 flex items-center">
+                  <i class="fas fa-info-circle mr-2"></i> Más información
+                </a>
+                <a href="#" class="px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow hover:bg-gray-300 transition duration-300 flex items-center">
+                  <i class="fas fa-external-link-alt mr-2"></i> Probar ahora
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- ThePalms Crypto -->
+        <div class="max-w-6xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="md:flex">
+            <div class="md:w-1/2 relative">
+              <img src="https://images.pexels.com/photos/6770610/pexels-photo-6770610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="ThePalms Crypto" class="w-full h-full object-cover">
+              <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-green-600/70 to-transparent md:hidden"></div>
+              <div class="absolute top-4 left-4 bg-white text-green-600 rounded-full px-3 py-1 font-bold text-sm shadow-md md:hidden">
+                ThePalms Crypto
+              </div>
+            </div>
+            <div class="md:w-1/2 p-8 md:p-12">
+              <div class="uppercase tracking-wide text-sm text-green-600 font-semibold hidden md:block">Proyecto destacado</div>
+              <h2 class="text-3xl font-bold mt-2 mb-4 hidden md:block">ThePalms Crypto</h2>
+              <div class="flex items-center mb-6 space-x-2">
+                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-md text-xs font-medium">Versión 1.8</span>
+                <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-medium">Disponible</span>
+                <span class="px-2 py-1 bg-red-100 text-red-800 rounded-md text-xs font-medium">Beta</span>
+              </div>
+              
+              <p class="text-gray-700 mb-6">
+                <strong>ThePalms Crypto</strong> es una plataforma que ofrece indicadores avanzados y estrategias para el trading de criptomonedas. Diseñada tanto para principiantes como para traders experimentados, proporciona análisis en tiempo real y alertas personalizadas.
+              </p>
+              
+              <div class="mb-8">
+                <h3 class="text-lg font-semibold mb-3">Características principales:</h3>
+                <ul class="space-y-2">
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Indicadores técnicos exclusivos</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Alertas de precios y patrones técnicos</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Seguimiento de portfolio en tiempo real</span>
+                  </li>
+                  <li class="flex items-start">
+                    <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                    <span>Estrategias automatizadas (próximamente)</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div class="flex flex-wrap gap-4">
+                <a href="/pages/proyectos/crypto.html" class="px-6 py-3 bg-green-600 text-white font-semibold rounded-lg shadow hover:bg-green-700 transition duration-300 flex items-center">
+                  <i class="fas fa-info-circle mr-2"></i> Más información
+                </a>
+                <a href="#" class="px-6 py-3 bg-gray-200 text-gray-800 font-semibold rounded-lg shadow hover:bg-gray-300 transition duration-300 flex items-center">
+                  <i class="fas fa-external-link-alt mr-2"></i> Acceder ahora
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Próximos proyectos -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center mb-10">
+          <h2 class="text-3xl font-bold mb-4">Próximos lanzamientos</h2>
+          <p class="text-gray-700">Estamos trabajando continuamente en nuevas herramientas y actualizaciones. Estos son algunos de nuestros proyectos en desarrollo.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <!-- Próximo proyecto 1 -->
+          <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-purple-500">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold">ThePalms AI Assistant</h3>
+              <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-md text-xs font-medium">En desarrollo</span>
+            </div>
+            <p class="text-gray-700 mb-4">Asistente virtual con IA avanzada para ayudarte con tareas digitales, recomendaciones de productos y solución de problemas tecnológicos.</p>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+              <div class="bg-purple-600 h-2.5 rounded-full" style="width: 65%"></div>
+            </div>
+            <div class="text-right text-gray-500 text-sm">Progreso: 65%</div>
+          </div>
+          
+          <!-- Próximo proyecto 2 -->
+          <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-500">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-xl font-bold">ThePalms Photo Editor</h3>
+              <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs font-medium">Planificación</span>
+            </div>
+            <p class="text-gray-700 mb-4">Editor de fotografías con herramientas de IA para mejorar automáticamente tus imágenes, eliminar fondos y aplicar efectos profesionales.</p>
+            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+              <div class="bg-blue-600 h-2.5 rounded-full" style="width: 20%"></div>
+            </div>
+            <div class="text-right text-gray-500 text-sm">Progreso: 20%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-10 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold mb-4">Mantente actualizado sobre nuestros proyectos</h2>
+        <p class="mb-6 max-w-2xl mx-auto">Suscríbete para recibir notificaciones sobre nuevos lanzamientos, actualizaciones y acceso anticipado a nuestras herramientas.</p>
+        <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+          <input type="email" placeholder="Tu correo electrónico" class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button type="submit" class="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition duration-300">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer Component -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Logo and About -->
+        <div class="col-span-1 md:col-span-1">
+          <div class="mb-4">
+            <img src="/images/logo.png" alt="thePalms.tech Logo" class="h-10 mb-3 invert"> <!-- 'invert' aplica un filtro para que el logo se vea bien en fondo oscuro -->
+          </div>
+          <p class="text-gray-300 mb-6">
+            Contenido tecnológico accesible y actualizado, basado en experiencias reales y pruebas objetivas.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4">Navegación</h3>
+          <ul class="space-y-2">
+            <li><a href="/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Inicio</a></li>
+            <li><a href="/pages/videos/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Videos</a></li>
+            <li><a href="/pages/rankings/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Rankings</a></li>
+            <li><a href="/pages/proyectos/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Proyectos</a></li>
+            <li><a href="/pages/quienes-somos.html" class="text-gray-300 hover:text-white transition-colors duration-300">¿Quiénes Somos?</a></li>
+            <li><a href="/pages/blog/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Blog</a></li>
+          </ul>
+        </div>
+        
+        <!-- Projects -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4">Proyectos</h3>
+          <ul class="space-y-2">
+            <li><a href="/pages/proyectos/notelite.html" class="text-gray-300 hover:text-white transition-colors duration-300">Notelite</a></li>
+            <li><a href="/pages/proyectos/quickfind.html" class="text-gray-300 hover:text-white transition-colors duration-300">QuickFind</a></li>
+            <li><a href="/pages/proyectos/crypto.html" class="text-gray-300 hover:text-white transition-colors duration-300">ThePalms Crypto</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+          <form class="space-y-4">
+            <div>
+              <input type="email" placeholder="Tu correo electrónico" class="w-full px-3 py-2 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+              <textarea placeholder="Mensaje" rows="3" class="w-full px-3 py-2 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-300">Enviar</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+        <p>&copy; 2025 thePalms.tech - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+</body>
+</html>

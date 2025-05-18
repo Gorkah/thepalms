@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/favicon/site.webmanifest">
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta name="keywords" content="tecnología, reviews, youtube, tutoriales, guías, rankings, productos tecnológicos">
+  <meta name="author" content="thePalms.tech">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{CURRENT_URL}}">
+  <meta property="og:title" content="{{TITLE}} | thePalms.tech">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:image" content="{{OG_IMAGE}}">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{CURRENT_URL}}">
+  <meta property="twitter:title" content="{{TITLE}} | thePalms.tech">
+  <meta property="twitter:description" content="{{DESCRIPTION}}">
+  <meta property="twitter:image" content="{{OG_IMAGE}}">
+  
+  <!-- Precargar recursos clave -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="/images/logo.png" as="image">
+  
+  <!-- Tailwind CSS desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- Estilos específicos de la página -->
+  {{PAGE_STYLES}}
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+  <!-- Header Component -->
+  <div id="header-component"></div>
+  
+  <!-- Contenido principal -->
+  <main class="flex-grow">
+    {{MAIN_CONTENT}}
+  </main>
+  
+  <!-- Footer Component -->
+  <div id="footer-component"></div>
+  
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+  
+  <!-- Scripts específicos de la página -->
+  {{PAGE_SCRIPTS}}
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>thePalms - Tecnología y Rankings de Productos</title>
+  <meta name="description" content="Bienvenido a thePalms, tu fuente confiable sobre tecnología. Convertimos videos en texto para facilitar el acceso a información valiosa y ofrecemos rankings completos de productos para ayudarte a tomar decisiones informadas.">
+  <meta name="keywords" content="rankings de productos, contenido de calidad, thePalms, tecnología, análisis productos, reseñas, thepalms tech, gold award">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  
+  <!-- Tailwind CSS desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="/css/main.css">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="thePalms - Tecnología y Rankings de Productos">
+  <meta property="og:description" content="Tu fuente confiable de información tecnológica actualizada y rankings de productos basados en pruebas reales.">
+  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:url" content="https://thepalms.tech">
+  <meta property="og:type" content="website">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+  <!-- Header Component -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo -->
+        <a href="/index.html" class="flex items-center">
+          <img src="/images/logo.png" alt="thePalms.tech Logo" class="h-10">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Inicio</a>
+          <a href="/pages/videos/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Videos</a>
+          <a href="/pages/rankings/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Rankings</a>
+          <a href="/pages/proyectos/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Proyectos</a>
+          <a href="/pages/quienes-somos.html" class="nav-link hover:text-blue-600 transition-colors duration-300">¿Quiénes Somos?</a>
+          <a href="/pages/blog/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Blog</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <nav class="flex flex-col space-y-4">
+          <a href="/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Inicio</a>
+          <a href="/pages/videos/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Videos</a>
+          <a href="/pages/rankings/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Rankings</a>
+          <a href="/pages/proyectos/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Proyectos</a>
+          <a href="/pages/quienes-somos.html" class="nav-link hover:text-blue-600 transition-colors duration-300">¿Quiénes Somos?</a>
+          <a href="/pages/blog/index.html" class="nav-link hover:text-blue-600 transition-colors duration-300">Blog</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Contenido principal -->
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="absolute inset-0 bg-blue-900 opacity-10"></div>
+        <div class="absolute inset-0" style="background-image: url('https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); background-size: cover; background-position: center; mix-blend-mode: overlay;"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">ThePalms.tech</h1>
+          <p class="text-xl md:text-2xl mb-8">Tecnología accesible y evaluaciones imparciales para decisiones informadas</p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/pages/rankings/index.html" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow hover:bg-gray-100 transition duration-300 flex items-center">
+              <i class="fas fa-trophy mr-2"></i> Ver Rankings
+            </a>
+            <a href="/pages/blog/index.html" class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 transition duration-300 flex items-center">
+              <i class="fas fa-book-open mr-2"></i> Explorar Blog
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">¿Qué ofrecemos?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="card p-6 bg-white border border-gray-200">
+            <div class="text-blue-600 mb-4 text-4xl">
+              <i class="fas fa-video"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Videos Transcritos</h3>
+            <p class="text-gray-600">Convertimos videos en texto para facilitar el acceso a información valiosa y ahorrar tu tiempo.</p>
+            <a href="/pages/videos/index.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800">Ver transcripciones →</a>
+          </div>
+          
+          <!-- Feature 2 -->
+          <div class="card p-6 bg-white border border-gray-200">
+            <div class="text-blue-600 mb-4 text-4xl">
+              <i class="fas fa-medal"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Rankings Completos</h3>
+            <p class="text-gray-600">Evaluaciones imparciales y detalladas de productos tecnológicos, con nuestro exclusivo ThePalms Gold Award.</p>
+            <a href="/pages/rankings/index.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800">Explorar rankings →</a>
+          </div>
+          
+          <!-- Feature 3 -->
+          <div class="card p-6 bg-white border border-gray-200">
+            <div class="text-blue-600 mb-4 text-4xl">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Proyectos Innovadores</h3>
+            <p class="text-gray-600">Herramientas como Notelite, QuickFind y ThePalms Crypto, desarrolladas para mejorar tu experiencia digital.</p>
+            <a href="/pages/proyectos/index.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800">Ver proyectos →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Rankings -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-3xl font-bold">Rankings Destacados</h2>
+          <a href="/pages/rankings/index.html" class="text-blue-600 hover:text-blue-800">Ver todos →</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Ranking Item 1 -->
+          <div class="card bg-white overflow-hidden">
+            <img src="https://images.pexels.com/photos/1841841/pexels-photo-1841841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Smartphones 2025" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-semibold">Mejores Smartphones 2025</h3>
+                <span class="gold-award-badge text-xs">Gold</span>
+              </div>
+              <p class="text-gray-600 mb-4">Nuestra selección de los smartphones más destacados del año, con evaluaciones detalladas y recomendaciones personalizadas.</p>
+              <a href="/pages/rankings/smartphones-2025.html" class="text-blue-600 hover:text-blue-800">Leer más →</a>
+            </div>
+          </div>
+          
+          <!-- Ranking Item 2 -->
+          <div class="card bg-white overflow-hidden">
+            <img src="https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Laptops de Gaming" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-semibold">Laptops de Gaming</h3>
+                <span class="gold-award-badge text-xs">Gold</span>
+              </div>
+              <p class="text-gray-600 mb-4">Análisis completo de las mejores laptops para gaming, evaluando rendimiento, refrigeración y relación calidad-precio.</p>
+              <a href="/pages/rankings/laptops-gaming.html" class="text-blue-600 hover:text-blue-800">Leer más →</a>
+            </div>
+          </div>
+          
+          <!-- Ranking Item 3 -->
+          <div class="card bg-white overflow-hidden">
+            <img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Auriculares Bluetooth" class="w-full h-48 object-cover">
+            <div class="p-6">
+              <div class="flex justify-between items-start mb-2">
+                <h3 class="text-xl font-semibold">Auriculares Bluetooth</h3>
+              </div>
+              <p class="text-gray-600 mb-4">Guía completa de los mejores auriculares inalámbricos, con pruebas de calidad de sonido y comodidad durante uso prolongado.</p>
+              <a href="/pages/rankings/auriculares-bluetooth.html" class="text-blue-600 hover:text-blue-800">Leer más →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Posts -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-3xl font-bold">Últimas Publicaciones</h2>
+          <a href="/pages/blog/index.html" class="text-blue-600 hover:text-blue-800">Ver todas →</a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Post 1 -->
+          <article class="card bg-white overflow-hidden flex flex-col md:flex-row">
+            <img src="https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Inteligencia Artificial" class="w-full md:w-1/3 h-48 md:h-auto object-cover">
+            <div class="p-6 flex-1">
+              <h3 class="text-xl font-semibold mb-2">El Futuro de la IA en Dispositivos Móviles</h3>
+              <p class="text-gray-500 mb-2 text-sm">15 mayo, 2025 • 5 min de lectura</p>
+              <p class="text-gray-600 mb-4">Exploramos cómo la inteligencia artificial está revolucionando la forma en que interactuamos con nuestros dispositivos móviles.</p>
+              <a href="/pages/blog/ia-dispositivos-moviles.html" class="text-blue-600 hover:text-blue-800">Leer artículo →</a>
+            </div>
+          </article>
+          
+          <!-- Post 2 -->
+          <article class="card bg-white overflow-hidden flex flex-col md:flex-row">
+            <img src="https://images.pexels.com/photos/6476088/pexels-photo-6476088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Criptomonedas" class="w-full md:w-1/3 h-48 md:h-auto object-cover">
+            <div class="p-6 flex-1">
+              <h3 class="text-xl font-semibold mb-2">Guía de Inversión en Criptomonedas 2025</h3>
+              <p class="text-gray-500 mb-2 text-sm">10 mayo, 2025 • 8 min de lectura</p>
+              <p class="text-gray-600 mb-4">Todo lo que necesitas saber sobre inversiones en criptomonedas: riesgos, oportunidades y estrategias recomendadas.</p>
+              <a href="/pages/blog/guia-inversion-criptomonedas.html" class="text-blue-600 hover:text-blue-800">Leer artículo →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">¿Quieres estar al día en tecnología?</h2>
+        <p class="text-xl mb-8 max-w-3xl mx-auto">Suscríbete a nuestro boletín y recibe actualizaciones sobre los últimos rankings, análisis y proyectos de ThePalms.tech</p>
+        <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
+          <input type="email" placeholder="Tu correo electrónico" class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <button type="submit" class="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition duration-300">Suscribirme</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer Component -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Logo and About -->
+        <div class="col-span-1 md:col-span-1">
+          <div class="mb-4">
+            <img src="/images/logo.png" alt="thePalms.tech Logo" class="h-10 mb-3 invert"> <!-- 'invert' aplica un filtro para que el logo se vea bien en fondo oscuro -->
+          </div>
+          <p class="text-gray-300 mb-6">
+            Contenido tecnológico accesible y actualizado, basado en experiencias reales y pruebas objetivas.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/>
+              </svg>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4">Navegación</h3>
+          <ul class="space-y-2">
+            <li><a href="/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Inicio</a></li>
+            <li><a href="/pages/videos/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Videos</a></li>
+            <li><a href="/pages/rankings/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Rankings</a></li>
+            <li><a href="/pages/proyectos/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Proyectos</a></li>
+            <li><a href="/pages/quienes-somos.html" class="text-gray-300 hover:text-white transition-colors duration-300">¿Quiénes Somos?</a></li>
+            <li><a href="/pages/blog/index.html" class="text-gray-300 hover:text-white transition-colors duration-300">Blog</a></li>
+          </ul>
+        </div>
+        
+        <!-- Projects -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4">Proyectos</h3>
+          <ul class="space-y-2">
+            <li><a href="/pages/proyectos/notelite.html" class="text-gray-300 hover:text-white transition-colors duration-300">Notelite</a></li>
+            <li><a href="/pages/proyectos/quickfind.html" class="text-gray-300 hover:text-white transition-colors duration-300">QuickFind</a></li>
+            <li><a href="/pages/proyectos/crypto.html" class="text-gray-300 hover:text-white transition-colors duration-300">ThePalms Crypto</a></li>
+          </ul>
+        </div>
+        
+        <!-- Contact -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4">Contacto</h3>
+          <form class="space-y-4">
+            <div>
+              <input type="email" placeholder="Tu correo electrónico" class="w-full px-3 py-2 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <div>
+              <textarea placeholder="Mensaje" rows="3" class="w-full px-3 py-2 bg-gray-700 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-300">Enviar</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+        <p>&copy; 2025 thePalms.tech - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="/js/main.js"></script>
+</body>
+</html>
