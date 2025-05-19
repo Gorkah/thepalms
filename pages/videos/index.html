@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos Transcritos - thePalms.tech</title>
+  <meta name="description" content="Transcripciones de videos de tecnología para facilitar el acceso a información clave y ahorrar tiempo. Contenido optimizado para búsqueda y consulta rápida.">
+  <meta name="keywords" content="transcripciones videos, tecnología, análisis videos, youtube transcrito, thepalms videos">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="/thepalms/images/favicon.ico" type="image/x-icon">
+  
+  <!-- Tailwind CSS desde CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="/thepalms/css/main.css">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+  <!-- Header Component -->
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white sticky top-0 z-50 shadow-lg">
+    <!-- Top Bar with Social Icons -->
+    <div class="bg-gray-900 py-2 px-4">
+      <div class="container mx-auto flex justify-end items-center space-x-4">
+        <a href="https://www.linkedin.com/company/thepalms/" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+          </svg>
+        </a>
+        <a href="https://www.tiktok.com/@thepalmstech" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+          </svg>
+        </a>
+        <a href="https://x.com/thepalmstech" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="Twitter/X">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/thepalmstech" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+        </a>
+        <a href="https://github.com/gorkah" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="GitHub">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <!-- Logo with Glow Effect -->
+        <a href="/thepalms/index.html" class="flex items-center transform hover:scale-105 transition-transform">
+          <img src="/thepalms/images/logo.png" alt="thePalms.tech Logo" class="h-10 drop-shadow-lg">
+        </a>
+        
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-8">
+          <a href="/thepalms/index.html" class="text-white font-medium hover:text-blue-200 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-200 py-1">Inicio</a>
+          <a href="/thepalms/pages/videos/index.html" class="text-white font-medium hover:text-blue-200 transition-colors duration-300 border-b-2 border-blue-200 py-1">Videos</a>
+          <a href="/thepalms/pages/rankings/index.html" class="text-white font-medium hover:text-blue-200 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-200 py-1">Rankings</a>
+          <a href="/thepalms/pages/proyectos/index.html" class="text-white font-medium hover:text-blue-200 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-200 py-1">Proyectos</a>
+          <a href="/thepalms/pages/quienes-somos.html" class="text-white font-medium hover:text-blue-200 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-200 py-1">¿Quiénes Somos?</a>
+          <a href="/thepalms/pages/blog/index.html" class="text-white font-medium hover:text-blue-200 transition-colors duration-300 border-b-2 border-transparent hover:border-blue-200 py-1">Blog</a>
+        </nav>
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden flex items-center text-white">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Navigation -->
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <nav class="flex flex-col space-y-4">
+          <a href="/thepalms/index.html" class="text-white hover:text-blue-200 transition-colors duration-300 pl-2 border-l-2 border-transparent hover:border-blue-200">Inicio</a>
+          <a href="/thepalms/pages/videos/index.html" class="text-white hover:text-blue-200 transition-colors duration-300 pl-2 border-l-2 border-blue-200">Videos</a>
+          <a href="/thepalms/pages/rankings/index.html" class="text-white hover:text-blue-200 transition-colors duration-300 pl-2 border-l-2 border-transparent hover:border-blue-200">Rankings</a>
+          <a href="/thepalms/pages/proyectos/index.html" class="text-white hover:text-blue-200 transition-colors duration-300 pl-2 border-l-2 border-transparent hover:border-blue-200">Proyectos</a>
+          <a href="/thepalms/pages/quienes-somos.html" class="text-white hover:text-blue-200 transition-colors duration-300 pl-2 border-l-2 border-transparent hover:border-blue-200">¿Quiénes Somos?</a>
+          <a href="/thepalms/pages/blog/index.html" class="text-white hover:text-blue-200 transition-colors duration-300 pl-2 border-l-2 border-transparent hover:border-blue-200">Blog</a>
+          
+          <!-- Social Media Icons for Mobile -->
+          <div class="flex justify-center mt-4 space-x-6 pb-2 pt-4 border-t border-blue-500">
+            <a href="https://www.linkedin.com/company/thepalms/" target="_blank" class="text-white hover:text-blue-200 transition-all transform hover:scale-110" title="LinkedIn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@thepalmstech" target="_blank" class="text-white hover:text-blue-200 transition-all transform hover:scale-110" title="TikTok">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/thepalmstech" target="_blank" class="text-white hover:text-blue-200 transition-all transform hover:scale-110" title="Twitter/X">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/thepalmstech" target="_blank" class="text-white hover:text-blue-200 transition-all transform hover:scale-110" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/gorkah" target="_blank" class="text-white hover:text-blue-200 transition-all transform hover:scale-110" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Contenido principal -->
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-3xl md:text-4xl font-bold mb-4">Videos Transcritos</h1>
+          <p class="text-lg mb-8">Convirtiendo el contenido audiovisual en texto para facilitar tu acceso a la información</p>
+          
+          <!-- Buscador -->
+          <div class="max-w-2xl mx-auto">
+            <div class="relative">
+              <input type="text" placeholder="Buscar videos por temática, producto o marca..." class="w-full px-5 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition duration-300">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-8 bg-white border-b">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap items-center justify-between">
+          <div class="w-full md:w-auto mb-4 md:mb-0">
+            <h2 class="text-lg font-semibold">Filtrar por categoría:</h2>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition duration-300">Todos</button>
+            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Smartphones</button>
+            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Gadgets</button>
+            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Reviews</button>
+            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Software</button>
+            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Tutoriales</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Video Item 1 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Review iPhone 15 Pro" class="w-full h-48 object-cover">
+              <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+                <i class="fab fa-youtube mr-1"></i> YouTube
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Review completa: iPhone 15 Pro Max</h3>
+              <p class="text-gray-500 text-sm mb-3">Publicado: 10/05/2023 • 15 min lectura • Categoría: Smartphones</p>
+              <p class="text-gray-700 mb-4 line-clamp-3">Análisis detallado del nuevo iPhone 15 Pro Max, con pruebas de cámara, rendimiento y batería. Comparativas con modelos anteriores y recomendaciones finales.</p>
+              <a href="/pages/videos/iphone-15-pro-max.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 inline-flex items-center">
+                Leer transcripción completa <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Video Item 2 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mejores Laptops 2023" class="w-full h-48 object-cover">
+              <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+                <i class="fab fa-youtube mr-1"></i> YouTube
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Las 5 mejores laptops para profesionales</h3>
+              <p class="text-gray-500 text-sm mb-3">Publicado: 05/04/2023 • 12 min lectura • Categoría: Reviews</p>
+              <p class="text-gray-700 mb-4 line-clamp-3">Selección de las mejores laptops para profesionales, con análisis de rendimiento, pantalla, teclado y portabilidad. Comparativa de precios y opciones según presupuesto.</p>
+              <a href="/pages/videos/mejores-laptops-profesionales.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 inline-flex items-center">
+                Leer transcripción completa <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Video Item 3 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tutorial Photoshop" class="w-full h-48 object-cover">
+              <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+                <i class="fab fa-youtube mr-1"></i> YouTube
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Tutorial Photoshop: edición profesional</h3>
+              <p class="text-gray-500 text-sm mb-3">Publicado: 15/03/2023 • 18 min lectura • Categoría: Tutoriales</p>
+              <p class="text-gray-700 mb-4 line-clamp-3">Guía completa de edición fotográfica en Photoshop. Aprende técnicas avanzadas de retoque, capas, máscaras y ajustes que utilizan los profesionales.</p>
+              <a href="/pages/videos/tutorial-photoshop-edicion-profesional.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 inline-flex items-center">
+                Leer transcripción completa <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Video Item 4 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mejores tarjetas gráficas" class="w-full h-48 object-cover">
+              <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+                <i class="fab fa-youtube mr-1"></i> YouTube
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Tarjetas gráficas: guía completa 2023</h3>
+              <p class="text-gray-500 text-sm mb-3">Publicado: 20/02/2023 • 14 min lectura • Categoría: Hardware</p>
+              <p class="text-gray-700 mb-4 line-clamp-3">Análisis detallado de las mejores tarjetas gráficas del mercado. Comparativa de rendimiento en juegos, aplicaciones profesionales y relación calidad-precio.</p>
+              <a href="/pages/videos/guia-tarjetas-graficas-2023.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 inline-flex items-center">
+                Leer transcripción completa <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Video Item 5 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/2599244/pexels-photo-2599244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Auriculares inalámbricos" class="w-full h-48 object-cover">
+              <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+                <i class="fab fa-youtube mr-1"></i> YouTube
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Top 5 auriculares inalámbricos 2023</h3>
+              <p class="text-gray-500 text-sm mb-3">Publicado: 08/01/2023 • 10 min lectura • Categoría: Gadgets</p>
+              <p class="text-gray-700 mb-4 line-clamp-3">Selección de los mejores auriculares inalámbricos del mercado. Analizamos calidad de sonido, comodidad, duración de batería y funciones especiales.</p>
+              <a href="/pages/videos/top-auriculares-inalambricos.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 inline-flex items-center">
+                Leer transcripción completa <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Video Item 6 -->
+          <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
+            <div class="relative">
+              <img src="https://images.pexels.com/photos/6476088/pexels-photo-6476088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Criptomonedas" class="w-full h-48 object-cover">
+              <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+                <i class="fab fa-youtube mr-1"></i> YouTube
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-semibold mb-2">Guía completa de inversión en criptomonedas</h3>
+              <p class="text-gray-500 text-sm mb-3">Publicado: 25/03/2023 • 20 min lectura • Categoría: Fintech</p>
+              <p class="text-gray-700 mb-4 line-clamp-3">Todo lo que necesitas saber para comenzar a invertir en criptomonedas de forma segura. Explicación de blockchain, exchanges, wallets y estrategias de inversión.</p>
+              <a href="/pages/videos/guia-criptomonedas.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 inline-flex items-center">
+                Leer transcripción completa <i class="fas fa-arrow-right ml-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-12 flex justify-center">
+          <nav class="inline-flex rounded-md shadow">
+            <a href="#" class="py-2 px-4 bg-white border border-gray-300 rounded-l-md text-gray-700 hover:bg-gray-50">
+              Anterior
+            </a>
+            <a href="#" class="py-2 px-4 bg-blue-600 border border-blue-600 text-white hover:bg-blue-700">
+              1
+            </a>
+            <a href="#" class="py-2 px-4 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50">
+              2
+            </a>
+            <a href="#" class="py-2 px-4 bg-white border border-gray-300 text-gray-700 hover:bg-gray-50">
+              3
+            </a>
+            <a href="#" class="py-2 px-4 bg-white border border-gray-300 rounded-r-md text-gray-700 hover:bg-gray-50">
+              Siguiente
+            </a>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Información adicional -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-2xl font-bold mb-6">¿Por qué transcribimos videos?</h2>
+          <p class="text-gray-700 mb-8">
+            En thePalms.tech nos dedicamos a hacer la información tecnológica más accesible para todos. Las transcripciones permiten:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="text-blue-600 text-2xl mb-3">
+                <i class="fas fa-search"></i>
+              </div>
+              <h3 class="font-semibold mb-2">Búsqueda Precisa</h3>
+              <p class="text-gray-600">Encuentra exactamente lo que buscas sin tener que ver videos completos.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="text-blue-600 text-2xl mb-3">
+                <i class="fas fa-clock"></i>
+              </div>
+              <h3 class="font-semibold mb-2">Ahorro de Tiempo</h3>
+              <p class="text-gray-600">Lee en minutos lo que tomaría mucho más tiempo ver en formato video.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="text-blue-600 text-2xl mb-3">
+                <i class="fas fa-universal-access"></i>
+              </div>
+              <h3 class="font-semibold mb-2">Accesibilidad</h3>
+              <p class="text-gray-600">Contenido accesible para personas con discapacidad auditiva o en entornos silenciosos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA para solicitudes -->
+    <section class="py-10 bg-blue-600 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-2xl font-bold mb-4">¿No encuentras el video que buscas?</h2>
+        <p class="mb-6">Solicita la transcripción de cualquier video tecnológico que necesites y lo añadiremos a nuestra biblioteca.</p>
+        <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">Solicitar Transcripción</button>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer Component -->
+  <footer class="bg-gray-800 text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Logo and About -->
+        <div class="col-span-1 md:col-span-1">
+          <div class="mb-4">
+            <img src="/thepalms/images/logo.png" alt="thePalms.tech Logo" class="h-10 mb-3 invert"> <!-- 'invert' aplica un filtro para que el logo se vea bien en fondo oscuro -->
+          </div>
+          <p class="text-gray-300 mb-6">
+            Contenido tecnológico accesible y actualizado, basado en experiencias reales y pruebas objetivas.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@thepalmstech" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="TikTok">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/thepalmstech" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="Twitter/X">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/thepalmstech" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/gorkah" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Navigation -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4 text-blue-200">Navegación</h3>
+          <nav class="flex flex-col space-y-2">
+            <a href="/thepalms/index.html" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">Inicio</a>
+            <a href="/thepalms/pages/videos/index.html" class="text-white font-medium hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">Videos</a>
+            <a href="/thepalms/pages/rankings/index.html" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">Rankings</a>
+            <a href="/thepalms/pages/proyectos/index.html" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">Proyectos</a>
+            <a href="/thepalms/pages/quienes-somos.html" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">¿Quiénes Somos?</a>
+            <a href="/thepalms/pages/blog/index.html" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">Blog</a>
+          </nav>
+        </div>
+        
+        <!-- Recent Posts -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4 text-blue-200">Posts Recientes</h3>
+          <nav class="flex flex-col space-y-2">
+            <a href="/thepalms/pages/blog/ia-dispositivos-moviles.html" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">IA en Dispositivos Móviles</a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">Tendencias en Desarrollo Web</a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">Seguridad Informática 2023</a>
+            <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300 hover:translate-x-1 transform inline-block">El Futuro del Cloud Computing</a>
+          </nav>
+        </div>
+        
+        <!-- Contact -->
+        <div class="col-span-1">
+          <h3 class="text-lg font-semibold mb-4 text-blue-200">Contacto</h3>
+          <form class="space-y-4">
+            <div>
+              <input type="email" placeholder="Tu correo electrónico" class="w-full px-3 py-2 bg-blue-900/50 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+            <div>
+              <textarea placeholder="Tu mensaje" rows="3" class="w-full px-3 py-2 bg-blue-900/50 text-white rounded focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+            </div>
+            <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition-colors duration-300 shadow-md hover:shadow-lg">Enviar</button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Copyright -->
+      <div class="border-t border-blue-700/50 mt-10 pt-6 text-center text-gray-300">
+        <p>&copy; 2025 thePalms.tech - Hecho con <span class="text-red-500">❤</span> - Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="/thepalms/js/main.js"></script>
+</body>
+</html>
