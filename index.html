@@ -13,8 +13,10 @@
   <!-- Tailwind CSS desde CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="/thepalms/css/main.css">
+  <!-- Google Fonts: Inter y Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content="thePalms - Tecnología y Rankings de Productos">
@@ -25,29 +27,288 @@
   
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- AOS - Animate On Scroll Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="/thepalms/css/main.css">
+  
+  <style>
+    :root {
+      /* Paleta de colores vibrante pero profesional */
+      --color-blue-electric: #0070F3;
+      --color-blue-dark: #0050c1;
+      --color-gray-dark: #121212;
+      --color-gray-medium: #2D3748;
+      --color-white-pure: #FFFFFF;
+      --color-yellow-accent: #FFD60A;
+      --color-yellow-light: #FFEB80;
+      --color-gray-light: #F4F5F7;
+      --color-black-soft: #000000cc;
+      
+      /* Bordes redondeados */
+      --border-radius-sm: 0.375rem;
+      --border-radius-md: 0.75rem;
+      --border-radius-lg: 1rem;
+      --border-radius-xl: 1.25rem;
+      --border-radius-2xl: 1.5rem;
+      
+      /* Sombras */
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+      
+      /* Transiciones */
+      --transition-fast: all 0.2s ease;
+      --transition-normal: all 0.3s ease;
+      --transition-slow: all 0.5s ease;
+    }
+    
+    /* Configuración base */
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: var(--color-gray-dark);
+      background-color: var(--color-gray-light);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+    }
+    
+    /* Botones modernos */
+    .btn {
+      transition: var(--transition-normal);
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--border-radius-md);
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .btn:active {
+      transform: translateY(0);
+    }
+    
+    .btn-primary {
+      background: var(--color-blue-electric);
+      color: var(--color-white-pure);
+    }
+    
+    .btn-primary:hover {
+      background: var(--color-blue-dark);
+    }
+    
+    .btn-secondary {
+      background: var(--color-white-pure);
+      color: var(--color-blue-electric);
+      border: 2px solid var(--color-blue-electric);
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(0, 112, 243, 0.05);
+    }
+    
+    .btn-accent {
+      background: var(--color-yellow-accent);
+      color: var(--color-gray-dark);
+    }
+    
+    .btn-accent:hover {
+      background: var(--color-yellow-light);
+    }
+    
+    /* Tarjetas con glassmorphism */
+    .card {
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      transition: var(--transition-normal);
+      box-shadow: var(--shadow-md);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      transform-origin: center bottom;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px) scale(1.01);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    /* Badge de Gold Award */
+    .gold-award-badge {
+      background: linear-gradient(135deg, #FFD700, #FFA500);
+      color: var(--color-gray-dark);
+      font-weight: 700;
+      padding: 0.2rem 0.6rem;
+      border-radius: var(--border-radius-md);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 5px rgba(255, 215, 0, 0.3);
+    }
+    
+    /* Sección Hero */
+    .hero-section {
+      position: relative;
+      background: linear-gradient(120deg, #0070F3 0%, #4839fe 100%);
+      overflow: hidden;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+    
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    
+    .hero-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.1;
+      background: var(--color-white-pure);
+      animation: pulse 4s infinite ease-in-out;
+    }
+    
+    .hero-circle:nth-child(1) {
+      width: 300px;
+      height: 300px;
+      top: -100px;
+      right: 10%;
+      animation-delay: 0s;
+    }
+    
+    .hero-circle:nth-child(2) {
+      width: 500px;
+      height: 500px;
+      bottom: -200px;
+      left: -100px;
+      animation-delay: 1s;
+    }
+    
+    .hero-circle:nth-child(3) {
+      width: 200px;
+      height: 200px;
+      top: 30%;
+      right: 20%;
+      animation-delay: 2s;
+    }
+    
+    .hero-patterns {
+      position: absolute;
+      inset: 0;
+      opacity: 0.07;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.1; }
+      50% { transform: scale(1.1); opacity: 0.15; }
+      100% { transform: scale(1); opacity: 0.1; }
+    }
+    
+    /* Destacados y secciones */
+    .section-title {
+      position: relative;
+      display: inline-block;
+      font-weight: 800;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 40px;
+      height: 4px;
+      background-color: var(--color-yellow-accent);
+      border-radius: 2px;
+      transition: var(--transition-normal);
+    }
+    
+    .section-title:hover::after {
+      width: 60px;
+    }
+    
+    /* Enlaces modernos con subrayado animado */
+    .link-hover-effect {
+      position: relative;
+      display: inline-block;
+      transition: var(--transition-normal);
+      color: var(--color-blue-electric);
+      font-weight: 600;
+    }
+    
+    .link-hover-effect::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -2px;
+      left: 0;
+      background-color: currentColor;
+      transition: var(--transition-normal);
+    }
+    
+    .link-hover-effect:hover {
+      color: var(--color-blue-dark);
+    }
+    
+    .link-hover-effect:hover::after {
+      width: 100%;
+    }
+    
+    /* Formulario de suscripción moderno */
+    .subscription-form input {
+      border-radius: var(--border-radius-md);
+      transition: var(--transition-fast);
+      border: 2px solid transparent;
+    }
+    
+    .subscription-form input:focus {
+      box-shadow: 0 0 0 4px rgba(0, 112, 243, 0.1);
+      border-color: var(--color-blue-electric);
+    }
+  </style>
 </head>
-<body class="flex flex-col min-h-screen bg-gray-50">
+<body class="flex flex-col min-h-screen">
   <!-- Header Component Container -->
   <div id="header-container"></div>
 
-  
   <!-- Contenido principal -->
   <main class="flex-grow">
-    <!-- Hero Section -->
-    <section class="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-      <div class="absolute inset-0 overflow-hidden">
-        <div class="absolute inset-0 bg-blue-900 opacity-10"></div>
-        <div class="absolute inset-0" style="background-image: url('https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'); background-size: cover; background-position: center; mix-blend-mode: overlay;"></div>
+    <!-- Hero Section con fondo mejorado y animaciones -->
+    <section class="hero-section py-24 md:py-32">
+      <div class="hero-bg">
+        <div class="hero-circle"></div>
+        <div class="hero-circle"></div>
+        <div class="hero-circle"></div>
+        <div class="hero-patterns"></div>
       </div>
       <div class="container mx-auto px-4 relative z-10">
-        <div class="max-w-3xl">
-          <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">ThePalms.tech</h1>
-          <p class="text-xl md:text-2xl mb-8">Tecnología accesible y evaluaciones imparciales para decisiones informadas</p>
+        <div class="hero-content max-w-3xl" data-aos="fade-up" data-aos-duration="800">
+          <h1 class="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">ThePalms<span class="text-yellow-accent">.tech</span></h1>
+          <p class="text-xl md:text-2xl mb-10 text-white/90 font-light leading-relaxed">
+            Tecnología accesible y evaluaciones imparciales <span class="font-medium">para decisiones informadas</span>
+          </p>
           <div class="flex flex-wrap gap-4">
-            <a href="/thepalms/pages/rankings/index.html" class="px-6 py-3 bg-white text-blue-700 font-semibold rounded-lg shadow hover:bg-gray-100 transition duration-300 flex items-center">
+            <a href="/thepalms/pages/rankings/index.html" class="btn btn-secondary px-6 py-3">
               <i class="fas fa-trophy mr-2"></i> Ver Rankings
             </a>
-            <a href="/thepalms/pages/blog/index.html" class="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg shadow hover:bg-blue-600 transition duration-300 flex items-center">
+            <a href="/thepalms/pages/blog/index.html" class="btn btn-accent px-6 py-3">
               <i class="fas fa-book-open mr-2"></i> Explorar Blog
             </a>
           </div>
@@ -55,145 +316,221 @@
       </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="py-16 bg-white">
+    <!-- Features Section con tarjetas glassmorphism y animaciones -->
+    <section class="py-24 bg-gradient-to-b from-gray-50 to-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-12">¿Qué ofrecemos?</h2>
+        <h2 class="section-title text-3xl md:text-4xl font-bold text-center mb-4" data-aos="fade-up">¿Qué ofrecemos?</h2>
+        <p class="text-gray-600 text-center max-w-2xl mx-auto mb-16" data-aos="fade-up" data-aos-delay="100">Soluciones digitales que simplifican tu acceso a información tecnológica de calidad</p>
+        
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Feature 1 -->
-          <div class="card p-6 bg-white border border-gray-200">
-            <div class="text-blue-600 mb-4 text-4xl">
+          <div class="card p-8" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-blue-electric mb-6 text-5xl">
               <i class="fas fa-video"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Videos Transcritos</h3>
-            <p class="text-gray-600">Convertimos videos en texto para facilitar el acceso a información valiosa y ahorrar tu tiempo.</p>
-            <a href="/thepalms/pages/videos/index.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800">Ver transcripciones →</a>
+            <h3 class="text-xl md:text-2xl font-bold mb-4">Videos Transcritos</h3>
+            <p class="text-gray-600 mb-6">Convertimos videos en texto para facilitar el acceso a información valiosa y ahorrar tu tiempo.</p>
+            <a href="/thepalms/pages/videos/index.html" class="link-hover-effect">Ver transcripciones <i class="fas fa-arrow-right ml-1 text-sm transition-transform group-hover:translate-x-1"></i></a>
           </div>
           
           <!-- Feature 2 -->
-          <div class="card p-6 bg-white border border-gray-200">
-            <div class="text-blue-600 mb-4 text-4xl">
+          <div class="card p-8" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-blue-electric mb-6 text-5xl">
               <i class="fas fa-medal"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Rankings Completos</h3>
-            <p class="text-gray-600">Evaluaciones imparciales y detalladas de productos tecnológicos, con nuestro exclusivo ThePalms Gold Award.</p>
-            <a href="/thepalms/pages/rankings/index.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800">Explorar rankings →</a>
+            <h3 class="text-xl md:text-2xl font-bold mb-4">Rankings Completos</h3>
+            <p class="text-gray-600 mb-6">Evaluaciones imparciales y detalladas de productos tecnológicos, con nuestro exclusivo ThePalms Gold Award.</p>
+            <a href="/thepalms/pages/rankings/index.html" class="link-hover-effect">Explorar rankings <i class="fas fa-arrow-right ml-1 text-sm transition-transform group-hover:translate-x-1"></i></a>
           </div>
           
           <!-- Feature 3 -->
-          <div class="card p-6 bg-white border border-gray-200">
-            <div class="text-blue-600 mb-4 text-4xl">
+          <div class="card p-8" data-aos="fade-up" data-aos-delay="400">
+            <div class="text-blue-electric mb-6 text-5xl">
               <i class="fas fa-tools"></i>
             </div>
-            <h3 class="text-xl font-semibold mb-2">Proyectos Innovadores</h3>
-            <p class="text-gray-600">Herramientas como Notelite, QuickFind y ThePalms Crypto, desarrolladas para mejorar tu experiencia digital.</p>
-            <a href="/thepalms/pages/proyectos/index.html" class="inline-block mt-4 text-blue-600 hover:text-blue-800">Ver proyectos →</a>
+            <h3 class="text-xl md:text-2xl font-bold mb-4">Proyectos Innovadores</h3>
+            <p class="text-gray-600 mb-6">Herramientas como Notelite, QuickFind y ThePalms Crypto, desarrolladas para mejorar tu experiencia digital.</p>
+            <a href="/thepalms/pages/proyectos/index.html" class="link-hover-effect">Ver proyectos <i class="fas fa-arrow-right ml-1 text-sm transition-transform group-hover:translate-x-1"></i></a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Latest Rankings -->
-    <section class="py-16 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center mb-8">
-          <h2 class="text-3xl font-bold">Rankings Destacados</h2>
-          <a href="/thepalms/pages/rankings/index.html" class="text-blue-600 hover:text-blue-800">Ver todos →</a>
+    <!-- Latest Rankings con diseño mejorado -->
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50/30 to-indigo-50/30"></div>
+      <div class="absolute right-0 top-0 w-1/3 h-1/3 bg-yellow-accent/5 rounded-full blur-3xl"></div>
+      <div class="absolute left-0 bottom-0 w-1/4 h-1/4 bg-blue-electric/5 rounded-full blur-3xl"></div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+          <h2 class="section-title text-3xl md:text-4xl font-bold mb-4 md:mb-0" data-aos="fade-right">Rankings <span class="text-blue-electric">Destacados</span></h2>
+          <a href="/thepalms/pages/rankings/index.html" class="link-hover-effect group flex items-center font-medium" data-aos="fade-left">
+            Ver todos
+            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </a>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Ranking Item 1 -->
-          <div class="card bg-white overflow-hidden">
-            <img src="https://images.pexels.com/photos/1841841/pexels-photo-1841841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Smartphones 2025" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl font-semibold">Mejores Smartphones 2025</h3>
+          <div class="card" data-aos="fade-up">
+            <div class="relative overflow-hidden rounded-t-xl">
+              <img src="https://images.pexels.com/photos/1841841/pexels-photo-1841841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Smartphones 2025" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold">Mejores Smartphones 2025</h3>
                 <span class="gold-award-badge text-xs">Gold</span>
               </div>
-              <p class="text-gray-600 mb-4">Nuestra selección de los smartphones más destacados del año, con evaluaciones detalladas y recomendaciones personalizadas.</p>
-              <a href="/pages/rankings/smartphones-2025.html" class="text-blue-600 hover:text-blue-800">Leer más →</a>
+              <p class="text-gray-600 mb-5">Nuestra selección de los smartphones más destacados del año, con evaluaciones detalladas y recomendaciones personalizadas.</p>
+              <a href="/pages/rankings/smartphones-2025.html" class="link-hover-effect">Leer más <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
             </div>
           </div>
           
           <!-- Ranking Item 2 -->
-          <div class="card bg-white overflow-hidden">
-            <img src="https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Laptops de Gaming" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl font-semibold">Laptops de Gaming</h3>
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative overflow-hidden rounded-t-xl">
+              <img src="https://images.pexels.com/photos/577769/pexels-photo-577769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Laptops de Gaming" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold">Laptops de Gaming</h3>
                 <span class="gold-award-badge text-xs">Gold</span>
               </div>
-              <p class="text-gray-600 mb-4">Análisis completo de las mejores laptops para gaming, evaluando rendimiento, refrigeración y relación calidad-precio.</p>
-              <a href="/pages/rankings/laptops-gaming.html" class="text-blue-600 hover:text-blue-800">Leer más →</a>
+              <p class="text-gray-600 mb-5">Análisis completo de las mejores laptops para gaming, evaluando rendimiento, refrigeración y relación calidad-precio.</p>
+              <a href="/pages/rankings/laptops-gaming.html" class="link-hover-effect">Leer más <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
             </div>
           </div>
           
           <!-- Ranking Item 3 -->
-          <div class="card bg-white overflow-hidden">
-            <img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Auriculares Bluetooth" class="w-full h-48 object-cover">
-            <div class="p-6">
-              <div class="flex justify-between items-start mb-2">
-                <h3 class="text-xl font-semibold">Auriculares Bluetooth</h3>
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative overflow-hidden rounded-t-xl">
+              <img src="https://images.pexels.com/photos/3780681/pexels-photo-3780681.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Auriculares Bluetooth" class="w-full h-48 object-cover transition-transform duration-700 hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity"></div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-3">
+                <h3 class="text-xl font-bold">Auriculares Bluetooth</h3>
               </div>
-              <p class="text-gray-600 mb-4">Guía completa de los mejores auriculares inalámbricos, con pruebas de calidad de sonido y comodidad durante uso prolongado.</p>
-              <a href="/pages/rankings/auriculares-bluetooth.html" class="text-blue-600 hover:text-blue-800">Leer más →</a>
+              <p class="text-gray-600 mb-5">Guía completa de los mejores auriculares inalámbricos, con pruebas de calidad de sonido y comodidad durante uso prolongado.</p>
+              <a href="/pages/rankings/auriculares-bluetooth.html" class="link-hover-effect">Leer más <i class="fas fa-arrow-right ml-1 text-sm"></i></a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Latest Posts -->
-    <section class="py-16 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="flex justify-between items-center mb-8">
-          <h2 class="text-3xl font-bold">Últimas Publicaciones</h2>
-          <a href="/thepalms/pages/blog/index.html" class="text-blue-600 hover:text-blue-800">Ver todas →</a>
+    <!-- Latest Posts con diseño moderno -->
+    <section class="py-24 bg-white relative overflow-hidden">
+      <div class="absolute left-0 right-0 top-0 h-32 bg-gradient-to-b from-gray-50 to-transparent"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+          <h2 class="section-title text-3xl md:text-4xl font-bold mb-4 md:mb-0" data-aos="fade-right">Últimas <span class="text-blue-electric">Publicaciones</span></h2>
+          <a href="/thepalms/pages/blog/index.html" class="link-hover-effect group flex items-center font-medium" data-aos="fade-left">
+            Ver todas
+            <i class="fas fa-arrow-right ml-2 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </a>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
           <!-- Post 1 -->
-          <article class="card bg-white overflow-hidden flex flex-col md:flex-row">
-            <img src="https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Inteligencia Artificial" class="w-full md:w-1/3 h-48 md:h-auto object-cover">
-            <div class="p-6 flex-1">
-              <h3 class="text-xl font-semibold mb-2">El Futuro de la IA en Dispositivos Móviles</h3>
-              <p class="text-gray-500 mb-2 text-sm">15 mayo, 2025 • 5 min de lectura</p>
-              <p class="text-gray-600 mb-4">Exploramos cómo la inteligencia artificial está revolucionando la forma en que interactuamos con nuestros dispositivos móviles.</p>
-              <a href="/pages/blog/ia-dispositivos-moviles.html" class="text-blue-600 hover:text-blue-800">Leer artículo →</a>
+          <article class="card group flex flex-col md:flex-row overflow-hidden" data-aos="fade-up">
+            <div class="w-full md:w-2/5 relative overflow-hidden">
+              <img src="https://images.pexels.com/photos/3653849/pexels-photo-3653849.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                   alt="Inteligencia Artificial" 
+                   class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 bg-blue-electric/90 text-white text-xs rounded-full font-medium">Tecnología</span>
+              </div>
+            </div>
+            <div class="p-6 md:p-8 flex-1 flex flex-col">
+              <p class="text-blue-electric mb-2 flex items-center text-sm font-medium">
+                <i class="far fa-calendar-alt mr-2"></i> 15 mayo, 2025 • 5 min de lectura
+              </p>
+              <h3 class="text-xl md:text-2xl font-bold mb-4 group-hover:text-blue-electric transition-colors">El Futuro de la IA en Dispositivos Móviles</h3>
+              <p class="text-gray-600 mb-6">Exploramos cómo la inteligencia artificial está revolucionando la forma en que interactuamos con nuestros dispositivos móviles.</p>
+              <a href="/pages/blog/ia-dispositivos-moviles.html" class="link-hover-effect mt-auto">
+                Leer artículo <i class="fas fa-arrow-right ml-1 text-sm"></i>
+              </a>
             </div>
           </article>
           
           <!-- Post 2 -->
-          <article class="card bg-white overflow-hidden flex flex-col md:flex-row">
-            <img src="https://images.pexels.com/photos/6476088/pexels-photo-6476088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Criptomonedas" class="w-full md:w-1/3 h-48 md:h-auto object-cover">
-            <div class="p-6 flex-1">
-              <h3 class="text-xl font-semibold mb-2">Guía de Inversión en Criptomonedas 2025</h3>
-              <p class="text-gray-500 mb-2 text-sm">10 mayo, 2025 • 8 min de lectura</p>
-              <p class="text-gray-600 mb-4">Todo lo que necesitas saber sobre inversiones en criptomonedas: riesgos, oportunidades y estrategias recomendadas.</p>
-              <a href="/pages/blog/guia-inversion-criptomonedas.html" class="text-blue-600 hover:text-blue-800">Leer artículo →</a>
+          <article class="card group flex flex-col md:flex-row overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-full md:w-2/5 relative overflow-hidden">
+              <img src="https://images.pexels.com/photos/6476088/pexels-photo-6476088.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                   alt="Criptomonedas" 
+                   class="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-300">
+                <span class="inline-block px-3 py-1 bg-yellow-accent/90 text-gray-dark text-xs rounded-full font-medium">Finanzas</span>
+              </div>
+            </div>
+            <div class="p-6 md:p-8 flex-1 flex flex-col">
+              <p class="text-blue-electric mb-2 flex items-center text-sm font-medium">
+                <i class="far fa-calendar-alt mr-2"></i> 10 mayo, 2025 • 8 min de lectura
+              </p>
+              <h3 class="text-xl md:text-2xl font-bold mb-4 group-hover:text-blue-electric transition-colors">Guía de Inversión en Criptomonedas 2025</h3>
+              <p class="text-gray-600 mb-6">Todo lo que necesitas saber sobre inversiones en criptomonedas: riesgos, oportunidades y estrategias recomendadas.</p>
+              <a href="/pages/blog/guia-inversion-criptomonedas.html" class="link-hover-effect mt-auto">
+                Leer artículo <i class="fas fa-arrow-right ml-1 text-sm"></i>
+              </a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-16 bg-blue-600 text-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl font-bold mb-4">¿Quieres estar al día en tecnología?</h2>
-        <p class="text-xl mb-8 max-w-3xl mx-auto">Suscríbete a nuestro boletín y recibe actualizaciones sobre los últimos rankings, análisis y proyectos de ThePalms.tech</p>
-        <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-2">
-          <input type="email" placeholder="Tu correo electrónico" class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
-          <button type="submit" class="px-6 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-lg hover:bg-yellow-400 transition duration-300">Suscribirme</button>
-        </form>
+    <!-- CTA Section moderna con fondo de gradiente y efecto de partículas -->
+    <section class="py-24 relative overflow-hidden bg-gradient-to-r from-blue-electric to-indigo-700 text-white">
+      <!-- Efecto de partículas/círculos -->  
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="hero-circle"></div>
+        <div class="hero-circle"></div>
+        <div class="hero-patterns"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Quieres estar al día en tecnología?</h2>
+          <p class="text-xl md:text-2xl mb-10 text-white/80 font-light leading-relaxed">Suscríbete a nuestro boletín y recibe actualizaciones sobre los últimos rankings, análisis y proyectos de <span class="font-medium">ThePalms.tech</span></p>
+          
+          <form class="max-w-md mx-auto subscription-form" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input type="email" placeholder="Tu correo electrónico" class="flex-1 px-5 py-4 rounded-lg text-gray-900 focus:outline-none shadow-lg">
+              <button type="submit" class="btn btn-accent px-8 py-4 text-gray-dark font-bold tracking-wide group">
+                Suscribirme
+                <i class="fas fa-paper-plane ml-2 group-hover:translate-x-1 transition-transform"></i>
+              </button>
+            </div>
+            <p class="text-sm text-white/70 mt-4">Respetamos tu privacidad. Puedes darte de baja en cualquier momento.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
   
-  <!-- Footer Component Container -->
+  <!-- Footer con diseño moderno -->
   <div id="footer-container"></div>
   
   <!-- Scripts -->
-  <script src="/thepalms/js/main.js"></script>
-  <script src="/thepalms/js/header-component.js"></script>
-  <script src="/thepalms/js/footer-component.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/header-component.js"></script>
+  <script src="js/footer-component.js"></script>
+  
+  <!-- AOS Initialization -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false,
+        offset: 50
+      });
+    });
+  </script>
 </body>
 </html>
