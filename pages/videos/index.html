@@ -13,11 +13,177 @@
   <!-- Tailwind CSS desde CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   
-  <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="/thepalms/css/main.css">
+  <!-- Google Fonts: Inter y Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- AOS para animaciones al scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="../../css/main.css">
+  
+  <!-- Estilos adicionales para la página de videos -->
+  <style>
+    :root {
+      --blue-electric: #3563E9;
+      --blue-dark: #1E429F;
+      --yellow-accent: #FFC60B;
+      --neutral-100: #f8f9fa;
+      --neutral-200: #e9ecef;
+      --neutral-800: #343a40;
+      --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 6px 12px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 15px 25px rgba(0, 0, 0, 0.12);
+      --transition-normal: all 0.3s ease;
+      --transition-slow: all 0.5s ease;
+    }
+    
+    /* Hero Section Styles */
+    .hero-section {
+      background: linear-gradient(135deg, #3563E9 0%, #6E8EFF 50%, #9E6EFD 100%);
+      position: relative;
+    }
+    
+    .hero-bg {
+      opacity: 0.6;
+      overflow: hidden;
+    }
+    
+    .hero-circle {
+      position: absolute;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+      border-radius: 50%;
+    }
+    
+    .hero-circle:nth-child(1) {
+      width: 60vw;
+      height: 60vw;
+      top: -20%;
+      left: -10%;
+    }
+    
+    .hero-circle:nth-child(2) {
+      width: 40vw;
+      height: 40vw;
+      bottom: -10%;
+      right: -5%;
+    }
+    
+    .hero-circle:nth-child(3) {
+      width: 25vw;
+      height: 25vw;
+      top: 30%;
+      right: 20%;
+    }
+    
+    .hero-patterns {
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E");
+      opacity: 0.3;
+    }
+    
+    .text-yellow-accent {
+      color: var(--yellow-accent);
+    }
+    
+    .text-blue-electric {
+      color: var(--blue-electric);
+    }
+    
+    /* Button Styles */
+    .btn-primary {
+      background-color: var(--blue-electric);
+      color: white;
+      font-weight: 500;
+      transition: var(--transition-normal);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--blue-dark);
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background-color: white;
+      color: var(--neutral-800);
+      border: 1px solid var(--neutral-200);
+      font-weight: 500;
+      transition: var(--transition-normal);
+    }
+    
+    .btn-secondary:hover {
+      border-color: var(--blue-electric);
+      color: var(--blue-electric);
+      transform: translateY(-2px);
+    }
+    
+    /* Card Styles */
+    .card {
+      background: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-normal);
+    }
+    
+    .card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-5px);
+    }
+    
+    /* Link Hover Effect */
+    .link-hover-effect {
+      color: var(--blue-electric);
+      font-weight: 500;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      transition: var(--transition-normal);
+    }
+    
+    .link-hover-effect::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--blue-electric);
+      transition: var(--transition-normal);
+    }
+    
+    .link-hover-effect:hover {
+      color: var(--blue-dark);
+    }
+    
+    .link-hover-effect:hover::after {
+      width: 100%;
+    }
+    
+    /* Section Title */
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background: var(--blue-electric);
+      border-radius: 3px;
+    }
+  </style>
 </head>
 <body class="flex flex-col min-h-screen bg-gray-50">
   <!-- Header Component -->
@@ -123,18 +289,28 @@
   
   <!-- Contenido principal -->
   <main class="flex-grow">
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-12">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-3xl md:text-4xl font-bold mb-4">Videos Transcritos</h1>
-          <p class="text-lg mb-8">Convirtiendo el contenido audiovisual en texto para facilitar tu acceso a la información</p>
+    <!-- Hero Section con fondo mejorado y animaciones -->
+    <section class="hero-section py-20 md:py-24 relative overflow-hidden">
+      <div class="hero-bg absolute inset-0">
+        <div class="hero-circle"></div>
+        <div class="hero-circle"></div>
+        <div class="hero-circle"></div>
+        <div class="hero-patterns"></div>
+      </div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-duration="800">
+          <h1 class="text-3xl md:text-5xl font-bold mb-6 text-white tracking-tight">Videos <span class="text-yellow-accent">Transcritos</span></h1>
+          <p class="text-xl md:text-2xl mb-10 text-white/90 font-light leading-relaxed">
+            Convirtiendo el contenido audiovisual en texto para <span class="font-medium">facilitar tu acceso a la información</span>
+          </p>
           
-          <!-- Buscador -->
-          <div class="max-w-2xl mx-auto">
-            <div class="relative">
-              <input type="text" placeholder="Buscar videos por temática, producto o marca..." class="w-full px-5 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
-              <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition duration-300">
+          <!-- Buscador con animación -->
+          <div class="max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative shadow-lg rounded-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+              <input type="text" placeholder="Buscar videos por temática, producto o marca..." 
+                     class="w-full px-5 py-4 rounded-lg text-gray-900 focus:outline-none focus:shadow-inner border-2 border-transparent focus:border-blue-electric transition-all duration-300">
+              <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-electric text-white p-3 rounded-lg hover:bg-blue-dark transition-all duration-300 hover:shadow-md">
                 <i class="fas fa-search"></i>
               </button>
             </div>
@@ -143,79 +319,133 @@
       </div>
     </section>
 
-    <!-- Filter Section -->
-    <section class="py-8 bg-white border-b">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-wrap items-center justify-between">
-          <div class="w-full md:w-auto mb-4 md:mb-0">
-            <h2 class="text-lg font-semibold">Filtrar por categoría:</h2>
+    <!-- Filter Section con estilo moderno -->
+    <section class="py-10 bg-white border-b relative">
+      <div class="absolute inset-0 bg-gradient-to-r from-gray-50/50 to-gray-100/50"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div class="" data-aos="fade-right">
+            <h2 class="text-lg md:text-xl font-bold text-blue-electric">Filtrar por categoría</h2>
           </div>
-          <div class="flex flex-wrap gap-2">
-            <button class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition duration-300">Todos</button>
-            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Smartphones</button>
-            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Gadgets</button>
-            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Reviews</button>
-            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Software</button>
-            <button class="px-4 py-2 rounded-lg bg-gray-200 text-gray-800 hover:bg-gray-300 transition duration-300">Tutoriales</button>
+          <div class="flex flex-wrap gap-3" data-aos="fade-left">
+            <button class="btn-primary px-4 py-2 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center group">
+              <i class="fas fa-layer-group mr-2"></i> Todos
+              <span class="ml-1 text-xs bg-white/20 rounded-full px-2 py-0.5">24</span>
+            </button>
+            <button class="btn-secondary px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md flex items-center group">
+              <i class="fas fa-mobile-alt mr-2"></i> Smartphones
+              <span class="ml-1 text-xs bg-blue-electric/10 rounded-full px-2 py-0.5">8</span>
+            </button>
+            <button class="btn-secondary px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md flex items-center group">
+              <i class="fas fa-headphones mr-2"></i> Gadgets
+              <span class="ml-1 text-xs bg-blue-electric/10 rounded-full px-2 py-0.5">6</span>
+            </button>
+            <button class="btn-secondary px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md flex items-center group">
+              <i class="fas fa-star mr-2"></i> Reviews
+              <span class="ml-1 text-xs bg-blue-electric/10 rounded-full px-2 py-0.5">5</span>
+            </button>
+            <button class="btn-secondary px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md flex items-center group">
+              <i class="fas fa-code mr-2"></i> Software
+              <span class="ml-1 text-xs bg-blue-electric/10 rounded-full px-2 py-0.5">3</span>
+            </button>
+            <button class="btn-secondary px-4 py-2 rounded-lg transition-all duration-300 hover:shadow-md flex items-center group">
+              <i class="fas fa-graduation-cap mr-2"></i> Tutoriales
+              <span class="ml-1 text-xs bg-blue-electric/10 rounded-full px-2 py-0.5">2</span>
+            </button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Videos Section -->
-    <section class="py-12">
-      <div class="container mx-auto px-4">
+    <!-- Videos Section con tarjetas modernas -->
+    <section class="py-16 bg-gray-50 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-white to-transparent h-32"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <h2 class="section-title text-3xl md:text-4xl font-bold mb-12 text-center" data-aos="fade-up">
+          Contenido <span class="text-blue-electric">Destacado</span>
+        </h2>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Video Item 1 -->
-          <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
-            <div class="relative">
-              <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Review iPhone 15 Pro" class="w-full h-48 object-cover">
-              <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+          <div class="card group" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative overflow-hidden rounded-t-xl">
+              <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                   alt="Review iPhone 15 Pro" 
+                   class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute top-3 right-3 bg-red-600/90 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center shadow-lg">
                 <i class="fab fa-youtube mr-1"></i> YouTube
+              </div>
+              
+              <!-- Etiqueta de categoría -->
+              <div class="absolute bottom-3 left-3 transition-all duration-500 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
+                <span class="bg-blue-electric text-white text-xs px-3 py-1 rounded-full font-medium shadow-md">Smartphones</span>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">Review completa: iPhone 15 Pro Max</h3>
-              <p class="text-gray-500 text-sm mb-3">Publicado: 10/05/2023 • 15 min lectura • Categoría: Smartphones</p>
-              <p class="text-gray-700 mb-4 line-clamp-3">Análisis detallado del nuevo iPhone 15 Pro Max, con pruebas de cámara, rendimiento y batería. Comparativas con modelos anteriores y recomendaciones finales.</p>
-              <a href="/pages/videos/iphone-15-pro-max.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 inline-flex items-center">
-                Leer transcripción completa <i class="fas fa-arrow-right ml-1"></i>
+              <p class="text-blue-electric mb-2 flex items-center text-sm font-medium">
+                <i class="far fa-calendar-alt mr-2"></i> 10 Mayo, 2023 • 15 min de lectura
+              </p>
+              <h3 class="text-xl font-bold mb-3 group-hover:text-blue-electric transition-colors">Review completa: iPhone 15 Pro Max</h3>
+              <p class="text-gray-600 mb-5 line-clamp-3">Análisis detallado del nuevo iPhone 15 Pro Max, con pruebas de cámara, rendimiento y batería. Comparativas con modelos anteriores y recomendaciones finales.</p>
+              <a href="/pages/videos/iphone-15-pro-max.html" class="link-hover-effect">
+                Leer transcripción completa <i class="fas fa-arrow-right ml-1 text-sm transition-transform group-hover:translate-x-1"></i>
               </a>
             </div>
           </div>
 
           <!-- Video Item 2 -->
-          <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
-            <div class="relative">
-              <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mejores Laptops 2023" class="w-full h-48 object-cover">
-              <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+          <div class="card group" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative overflow-hidden rounded-t-xl">
+              <img src="https://images.pexels.com/photos/2582937/pexels-photo-2582937.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                   alt="Mejores Laptops 2023" 
+                   class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute top-3 right-3 bg-red-600/90 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center shadow-lg">
                 <i class="fab fa-youtube mr-1"></i> YouTube
+              </div>
+              
+              <!-- Etiqueta de categoría -->
+              <div class="absolute bottom-3 left-3 transition-all duration-500 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
+                <span class="bg-indigo-600 text-white text-xs px-3 py-1 rounded-full font-medium shadow-md">Reviews</span>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">Las 5 mejores laptops para profesionales</h3>
-              <p class="text-gray-500 text-sm mb-3">Publicado: 05/04/2023 • 12 min lectura • Categoría: Reviews</p>
-              <p class="text-gray-700 mb-4 line-clamp-3">Selección de las mejores laptops para profesionales, con análisis de rendimiento, pantalla, teclado y portabilidad. Comparativa de precios y opciones según presupuesto.</p>
-              <a href="/pages/videos/mejores-laptops-profesionales.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 inline-flex items-center">
-                Leer transcripción completa <i class="fas fa-arrow-right ml-1"></i>
+              <p class="text-blue-electric mb-2 flex items-center text-sm font-medium">
+                <i class="far fa-calendar-alt mr-2"></i> 5 Abril, 2023 • 12 min de lectura
+              </p>
+              <h3 class="text-xl font-bold mb-3 group-hover:text-blue-electric transition-colors">Las 5 mejores laptops para profesionales</h3>
+              <p class="text-gray-600 mb-5 line-clamp-3">Selección de las mejores laptops para profesionales, con análisis de rendimiento, pantalla, teclado y portabilidad. Comparativa de precios y opciones según presupuesto.</p>
+              <a href="/pages/videos/mejores-laptops-profesionales.html" class="link-hover-effect">
+                Leer transcripción completa <i class="fas fa-arrow-right ml-1 text-sm transition-transform group-hover:translate-x-1"></i>
               </a>
             </div>
           </div>
 
           <!-- Video Item 3 -->
-          <div class="bg-white rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:-translate-y-2">
-            <div class="relative">
-              <img src="https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Tutorial Photoshop" class="w-full h-48 object-cover">
-              <div class="absolute top-2 right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded flex items-center">
+          <div class="card group" data-aos="fade-up" data-aos-delay="300">
+            <div class="relative overflow-hidden rounded-t-xl">
+              <img src="https://images.pexels.com/photos/1109543/pexels-photo-1109543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+                   alt="Tutorial Photoshop" 
+                   class="w-full h-56 object-cover transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute top-3 right-3 bg-red-600/90 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center shadow-lg">
                 <i class="fab fa-youtube mr-1"></i> YouTube
+              </div>
+              
+              <!-- Etiqueta de categoría -->
+              <div class="absolute bottom-3 left-3 transition-all duration-500 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0">
+                <span class="bg-yellow-accent text-gray-900 text-xs px-3 py-1 rounded-full font-medium shadow-md">Tutoriales</span>
               </div>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-semibold mb-2">Tutorial Photoshop: edición profesional</h3>
-              <p class="text-gray-500 text-sm mb-3">Publicado: 15/03/2023 • 18 min lectura • Categoría: Tutoriales</p>
-              <p class="text-gray-700 mb-4 line-clamp-3">Guía completa de edición fotográfica en Photoshop. Aprende técnicas avanzadas de retoque, capas, máscaras y ajustes que utilizan los profesionales.</p>
-              <a href="/pages/videos/tutorial-photoshop-edicion-profesional.html" class="text-blue-600 font-medium hover:text-blue-800 transition-colors duration-300 inline-flex items-center">
-                Leer transcripción completa <i class="fas fa-arrow-right ml-1"></i>
+              <p class="text-blue-electric mb-2 flex items-center text-sm font-medium">
+                <i class="far fa-calendar-alt mr-2"></i> 15 Marzo, 2023 • 18 min de lectura
+              </p>
+              <h3 class="text-xl font-bold mb-3 group-hover:text-blue-electric transition-colors">Tutorial Photoshop: edición profesional</h3>
+              <p class="text-gray-600 mb-5 line-clamp-3">Guía completa de edición fotográfica en Photoshop. Aprende técnicas avanzadas de retoque, capas, máscaras y ajustes que utilizan los profesionales.</p>
+              <a href="/pages/videos/tutorial-photoshop-edicion-profesional.html" class="link-hover-effect">
+                Leer transcripción completa <i class="fas fa-arrow-right ml-1 text-sm transition-transform group-hover:translate-x-1"></i>
               </a>
             </div>
           </div>
