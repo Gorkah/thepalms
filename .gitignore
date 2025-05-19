@@ -1,0 +1,47 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Carpetas de dependencias
+/node_modules
+/.pnp
+.pnp.js
+
+# Directorio de cobertura
+/coverage
+
+# Directorios de compilación
+/build
+/out
+/.next
+/dist
+
+# Cachés
+.cache
+.sass-cache
+.serverless
+
+# Editor
+.idea
+.vscode
+*.swp
+*.swo
+
+# Miscellaneous
+*.backup
+*~
+*.bak
