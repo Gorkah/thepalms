@@ -1,4 +1,4 @@
-# ThePalms.tech - Sitio Web Moderno
+# ThePalms.tech - Sitio Web thePalms
 
 Este repositorio contiene el código fuente del sitio web ThePalms.tech, una plataforma dedicada al contenido tecnológico accesible y actualizado, basado en experiencias reales y pruebas objetivas.
 
