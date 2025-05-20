@@ -13,6 +13,8 @@ El sitio web está organizado en las siguientes secciones principales:
 - **¿Quiénes somos?**: Información sobre el creador y su misión (`/pages/quienes-somos.html`)
 - **Blog**: Sistema dinámico para publicaciones de blog (`/pages/blog/index.html`)
 
+  <img src="https://i.ibb.co/3yZQbPT8/b723185e-e89a-4512-8beb-0b2327b886fb.jpg" alt="b723185e-e89a-4512-8beb-0b2327b886fb" border="0">
+
 ## Tecnologías Utilizadas
 
 - HTML5
