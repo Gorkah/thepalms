@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
       <!-- Top Bar with Social Icons -->
       <div class="bg-gray-900 py-2 px-4">
         <div class="container mx-auto flex justify-end items-center space-x-4">
-          <a href="https://www.youtube.com/@thepalms1" target="_blank" class="text-white hover:text-blue-200 transition-all transform hover:scale-110" title="YouTube">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M10 15l5.16-3L10 9v6zm11.56-7.87c-.2-.48-.57-.87-.96-1.17A9.93 9.93 0 0012 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10c0-.81-.1-1.59-.28-2.34-.39-.3-.76-.69-.96-1.17h-2.52c.27.63.44 1.31.44 2.03 0 3.31-2.69 6-6 6s-6-2.69-6-6 2.69-6 6-6c1.72 0 3.29.65 4.48 1.74l-1.97 1.97c-.44-.41-.96-.7-1.51-.87V4h-2.5c-.83 0-1.5.67-1.5 1.5v13c0 .83.67 1.5 1.5 1.5H15v-9h-3v9H15c.83 0 1.5-.67 1.5-1.5V15l5 3V6c0-.83-.67-1.5-1.5-1.5H18V4h-2.44z"/>
+          <a href="https://www.youtube.com/@thepalms1" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="YouTube">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a2.99 2.99 0 0 0-2.105-2.115C19.423 3.5 12 3.5 12 3.5s-7.423 0-9.393.571a2.99 2.99 0 0 0-2.105 2.115A29.94 29.94 0 0 0 0 12c0 1.998.227 3.933.502 5.814a2.99 2.99 0 0 0 2.105 2.115c1.97.571 9.393.571 9.393.571s7.423 0 9.393-.571a2.99 2.99 0 0 0 2.105-2.115A29.94 29.94 0 0 0 24 12a29.94 29.94 0 0 0-.502-5.814zM9.75 15.568V8.432L15.818 12 9.75 15.568z"/>
             </svg>
           </a>
           <a href="https://www.linkedin.com/company/thepalms/" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="LinkedIn">
