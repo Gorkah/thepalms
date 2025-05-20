@@ -175,34 +175,32 @@
       overflow: hidden;
     }
     
-    .hero-circle {
+    .hero-logo {
       position: absolute;
-      border-radius: 50%;
-      opacity: 0.1;
-      background: var(--color-white-pure);
+      opacity: 0.15;
+      filter: brightness(0) invert(1);
       animation: pulse 4s infinite ease-in-out;
+      width: auto;
+      height: auto;
     }
     
-    .hero-circle:nth-child(1) {
-      width: 300px;
+    .hero-logo-1 {
       height: 300px;
       top: -100px;
       right: 10%;
       animation-delay: 0s;
     }
     
-    .hero-circle:nth-child(2) {
-      width: 500px;
+    .hero-logo-2 {
       height: 500px;
       bottom: -200px;
       left: -100px;
       animation-delay: 1s;
     }
     
-    .hero-circle:nth-child(3) {
-      width: 200px;
+    .hero-logo-3 {
       height: 200px;
-      top: 30%;
+      top: 20%;
       right: 20%;
       animation-delay: 2s;
     }
@@ -215,9 +213,9 @@
     }
     
     @keyframes pulse {
-      0% { transform: scale(1); opacity: 0.1; }
-      50% { transform: scale(1.1); opacity: 0.15; }
-      100% { transform: scale(1); opacity: 0.1; }
+      0% { transform: scale(1) rotate(0deg); opacity: 0.1; }
+      50% { transform: scale(1.1) rotate(5deg); opacity: 0.15; }
+      100% { transform: scale(1) rotate(0deg); opacity: 0.1; }
     }
     
     /* Destacados y secciones */
@@ -293,9 +291,9 @@
     <!-- Hero Section con fondo mejorado y animaciones -->
     <section class="hero-section py-24 md:py-32">
       <div class="hero-bg">
-        <div class="hero-circle"></div>
-        <div class="hero-circle"></div>
-        <div class="hero-circle"></div>
+        <img src="/thepalms/images/logo.png" alt="ThePalms Logo" class="hero-logo hero-logo-1">
+        <img src="/thepalms/images/logo.png" alt="ThePalms Logo" class="hero-logo hero-logo-2">
+        <img src="/thepalms/images/logo.png" alt="ThePalms Logo" class="hero-logo hero-logo-3">
         <div class="hero-patterns"></div>
       </div>
       <div class="container mx-auto px-4 relative z-10">
@@ -489,8 +487,8 @@
     <section class="py-24 relative overflow-hidden bg-gradient-to-r from-blue-electric to-indigo-700 text-white">
       <!-- Efecto de partículas/círculos -->  
       <div class="absolute inset-0 overflow-hidden">
-        <div class="hero-circle"></div>
-        <div class="hero-circle"></div>
+        <img src="/thepalms/images/logo.png" alt="ThePalms Logo" class="hero-logo hero-logo-1">
+        <img src="/thepalms/images/logo.png" alt="ThePalms Logo" class="hero-logo hero-logo-2">
         <div class="hero-patterns"></div>
       </div>
       
