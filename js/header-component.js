@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
     <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white sticky top-0 z-50 shadow-lg">
       <!-- Top Bar with Social Icons -->
       <div class="bg-gray-900 py-2 px-4">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- Texto thepalms.tech a la izquierda -->
+          <div class="text-gray-300 font-semibold text-lg select-none">
+            thepalms.tech
+          </div>
         <div class="container mx-auto flex justify-end items-center space-x-4">
           <a href="https://www.youtube.com/@thepalms1" target="_blank" class="text-gray-300 hover:text-white transition-all transform hover:scale-110" title="YouTube">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -41,12 +46,13 @@ document.addEventListener('DOMContentLoaded', function() {
           </a>
         </div>
       </div>
+    </div>
 
       <div class="container mx-auto px-4">
         <div class="flex justify-between items-center py-4">
           <!-- Logo with Glow Effect -->
           <a href="/thepalms/index.html" class="flex items-center transform hover:scale-105 transition-transform">
-            <img src="/thepalms/images/logo.png" alt="thePalms.tech Logo" class="h-10 drop-shadow-lg">
+            <img src="/thepalms/images/logo.png" alt="thePalms.tech Logo" class="h-20 drop-shadow-lg">
           </a>
           
           <!-- Desktop Navigation -->
